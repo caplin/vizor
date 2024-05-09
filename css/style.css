@@ -1,0 +1,178 @@
+/* O V E R R I D E S */
+
+.CodeMirror.cm-s-default {
+	width: 800px;
+	height:70px;
+	border: 1px solid black;
+	display: inline-block;
+}
+
+/* ------------------ */
+
+h3 {
+	font-family: monospace;
+	margin-bottom:5px;
+}
+
+.whatsnew, #filters {
+	font-size: 12px;
+	margin-bottom: 5px;
+	font-family: Tahoma;
+}
+
+#container {
+	width: 1200px;
+}
+
+.filterToken {
+	margin-left: 5px;
+	padding: 2px;
+	background-color: #DDE0D7;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 3px solid #A9A9A9;
+	cursor: pointer;
+}
+
+.filterButton {
+	cursor: pointer;
+}
+
+.vizor-button {
+	height: 50px;
+	width: 100px;
+	padding: 5px;
+	position: absolute;
+	cursor: pointer;
+}
+
+#go {
+	margin-left: 10px;
+	background-color: #CCFFBF;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border: 3px solid #009900;
+}
+
+#go:hover {
+	background-color: #E8F6E4;
+}
+
+#go-bottom {
+	margin-left: 115px;
+	background-color: #8CE9FB;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border: 3px solid #346CC5;
+}
+
+#go-bottom:hover {
+	background-color: #E1F6FA;
+}
+
+.log {
+	font-family: monospace;
+	font-size: 15px;
+	padding: 1px;
+}
+
+.log .collapseContainer {
+	margin-left: 140px;
+	padding-left: 5px;
+	background-color: lightgrey;
+	display: none;
+}
+
+.log .collapseContainer.collapsed {
+	display: block;
+}
+
+.log .collapseContainer.collapsed div{
+	cursor: default;
+}
+
+.log.hasCollapse {
+	cursor: pointer;
+}
+
+.log.hasCollapse:hover {
+	font-weight: bold;
+}
+
+.log .timestamp {
+	font-weight: bold;
+	padding-right: 15px;
+}
+
+.info .timestamp:before, .connection .timestamp:before {
+	content: '    ' ;
+}
+
+.in .timestamp:before {
+	content: ' << ' ;
+}
+
+.out .timestamp:before {
+	content: ' >> ' ;
+}
+
+#vizor_output {
+	height: 100%;
+	width: 1200px;
+	margin-top: 20px;
+	padding-left: 10px;
+}
+
+.content {
+	background-size: 16px;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+}
+
+.info .content, .keymaster .content {
+	background-image: url('info.png');
+}
+
+.connection .content {
+	background-image: url('network.png');
+	color: blue;
+}
+
+.container_event .content {
+	background-image: url('update.png');
+	color: rgb(249, 0, 140);
+}
+
+.subscribe .content {
+	background-image: url('subscribe.png');
+	font-weight: bold;
+	font-style: italic;
+	color: purple;
+}
+.contrib .content{
+	background-image: url('contrib.png');
+}
+
+.permission .content{
+	background-image: url('permission.png');
+}
+
+.tradeMessage {
+	background-color: rgb(133, 166, 243);
+}
+
+.server_status {
+	background-color: rgb(254, 233, 185);
+}
+.server_status .content{
+	background-image: url('server_status.png');
+
+}
+.discard .content {
+	background-image: url('discard.gif');
+	color: red;
+}
+
+.denied .content{
+	background-image: url('denied.png');
+}

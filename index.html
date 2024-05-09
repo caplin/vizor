@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>SLJS Vizor</title>
+	<link rel="shortcut icon" href="css/favicon.ico">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="lib/codemirror/codemirror.css">
+	<script type="text/javascript" src="src/Vizor.js"></script>
+	<script type="text/javascript" src="src/LogLine.js"></script>
+	<script type="text/javascript" src="lib/codemirror/codemirror.js"></script>
+
+</head>
+
+<body>
+	<div id=container>
+		<h3><a href="https://stash.caplin.com/projects/TP/repos/vizor/browse">SLJS Vizor on Stash</a></h3>
+		<div class="whatsnew"><b>New: </b>13/01/2021 Add support for different Contrib log line format in Mobile streamlink logs</div>
+		<div class="main-input">
+			<textarea autofocus id="eventPaste" placeholder="paste logs here"></textarea>
+			<button id="go" class="vizor-button" onclick="Vizor.process(Vizor.getLogs())">Go</button>
+			<button id="go-bottom" class="vizor-button" onclick="scrollToBottom()">Scroll to bottom</button>
+
+			<div id="filters"><br/>
+			<strong>Filter: </strong> <input type="text" id="filter" /> <button class="filterButton" onClick="Vizor.applyFilterFromInput()">Apply</button> <button class="filterButton" onClick="Vizor.clearFilters()">Clear all</button>
+			</div>
+		</div>
+		<div id="vizor_output"></div>
+	</div>
+	<script type="text/javascript">
+		checkReturnKeyPressed();
+		checkReturnKeyPressedFilter();
+		scrollToBottom = function(){
+			window.scrollTo(0,document.body.scrollHeight);
+		}
+
+		// C O D E  M I R R O R  S E T U P
+		window.editor = CodeMirror.fromTextArea(document.getElementById("eventPaste"), {
+		    lineNumbers: false,
+		    styleActiveLine: false,
+		    matchBrackets: false
+  		});
+	</script>
+</body>
