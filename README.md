@@ -1,5 +1,7 @@
 #Vizor
 
+View deployment at https://caplin.github.io/vizor/
+
 ### Classes
 Vizor.js https://stash.caplin.com/projects/TP/repos/vizor/browse/src/Vizor.js 
 - Responsible for processing the streamlink logs
